@@ -35,8 +35,36 @@ The benchmark specializes in statistical visualization challenges:
 ## Evaluation Criteria
 We evaluate the performance of LLMs based on the following criteria:
 1. **Runnable Code (20%)**: If the generated code can successfully produce a plot without errors, it earns 20% of the total score.
-2. **Correctness (50%)**: If the plot correctly implements all required statistical elements (error bars, significance tests, data transformations) and accurately represents the data relationships, it earns 50% of the total score.
-3. **Aesthetic Quality (20%)**: If the plot follows scientific visualization best practices and achieves publication-quality appearance, it earns 20% of the total score.
+2. **Correctness**: LLMs will evaluate and classify the correctness based on the following five levels: Excellent, Very Good, Average, Poor and Very Poor.  
+   - **Excellent**:
+   The plot fully meets all statistical requirements: all key statistical elements (such as error bars, significance tests, and data transformations) are implemented accurately and comprehensively, and the representation of data relationships is impeccable, fully supporting the conclusions of the data analysis.
+
+   - **Very Good**:
+   Most statistical requirements are met by the plot, with only minor details or edge cases not perfectly addressed. Overall, the data relationships are clearly expressed and largely meet the requirements.
+
+   - **Average**:
+   The implementation of statistical elements in the plot is rather average, with some imperfections or omissions. Although most statistical requirements are covered, some key details may not be sufficiently addressed, leading to a somewhat ambiguous representation of data relationships.
+
+   - **Poor**:
+   The plot meets statistical requirements only in a few aspects; major statistical elements (such as error bars, significance tests, or data transformations) are clearly missing or improperly implemented, resulting in unclear or potentially misleading representation of data relationships.
+
+   - **Very Poor**:
+   The plot has barely met the basic statistical requirements. Most of the important statistical elements have not been implemented or have been implemented incorrectly, leading to a chaotic or even distorted representation of data relationships.
+3. **Aesthetic Quality**: LLMs will evaluate and classify the aesthetic quality based on the following five levels: Excellent, Very Good, Average, Poor and Very Poor.  
+   - **Excellent**
+   The design of the plot follows the best practices of scientific visualization, and its overall appearance meets publication-level standards. The layout is well-organized and clear, and the color scheme and typography adhere to visual aesthetic requirements, making the plot both visually appealing and effective in conveying information.
+
+   - **Very Good**
+   The plot is generally aesthetically pleasing and adheres to scientific visualization standards. Although there may be minor areas for improvement (such as adjustments in font, spacing, or color), the overall design provides a good visual experience and a professional feel.
+
+   - **Average**
+   In terms of aesthetics, the plot is average. Its design and layout are fundamentally acceptable, but it lacks distinctive features or meticulous refinement. The visual appeal and professional quality are at a standard level, and the overall information conveyance is somewhat mediocre.
+
+   - **Poor**
+   The plot exhibits clear deficiencies in design and aesthetic presentation. The layout may be disorganized or the color scheme unappealing, and some elements may appear overly simplistic or inconsistent, which adversely affects the plot's ability to convey information and undermines its overall professionalism.
+
+   - **Very Poor**
+   The aesthetic design of the plot is severely lacking and does not adhere to the basic principles of scientific visualization. The layout is chaotic, the color choices are unsuitable, and the overall appearance is extremely amateurish, which greatly hinders information conveyance and the plot’s professional image.
 4. **Generation Speed (10%)**: Measured in tokens/second during code generation. Higher speed earns more points, with a maximum of 10% for speeds above a benchmark threshold.
 
 ## Installation
