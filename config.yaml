@@ -1,0 +1,3 @@
+api_keys:
+  openai: "sk-..."     # For GPT-4, ChatGPT
+  anthropic: "sk-..."  # For Claude
