@@ -20,10 +20,13 @@ def get_cmd_args():
 
 # 使用指定的LLM进行图像绘制的函数
 from .config import TEST_DIR
-def llm_plot_generation(model: str, realease_version: str):
+import pandas as pd
+def llm_plot_generation(model: str, realease_version: str): 
     print(f"使用 {model} 进行图像绘制")
-    # 确定测试数据集的路径
+    # 确定测试数据集的路径并进行检验
     testset_dir = TEST_DIR + realease_version + ".xls"
     if not os.path.exists(TEST_DIR):
         raise FileNotFoundError(f"测试数据集 {TEST_DIR} 不存在")
-    print(1)
+    print("testset_dir: ": testset_dir)
+    # 根据测试数据集的路径读取数据
+    test_data = pd.read_excel(testset_dir)
