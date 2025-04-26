@@ -75,6 +75,12 @@ git clone https://github.com/LivePlotBench/LivePlotBench.git
 cd LivePlotBench
 ```
 
+If you want to run the scripts, using the following command:
+
+```bash
+python .\script1.py --input <input_file> | python .\script2.py --input <input_file> | python .\script3.py --input <input_file>
+```
+
 ## Inference and Evaluation
 ### Dataset Versions
 LivePlotBench is continuously updated. We provide different versions of the dataset:
